@@ -50,6 +50,11 @@ module.exports = {
           },
         ],
       },
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+        yellowtail: ["Yellowtail", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
+      },
     },
   },
   plugins: [],
