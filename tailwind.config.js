@@ -54,6 +54,7 @@ module.exports = {
         montserrat: ["Montserrat", "sans-serif"],
         yellowtail: ["Yellowtail", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
+        "open-sans": ["Open Sans", "sans-serif"],
       },
     },
   },
