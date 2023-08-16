@@ -17,7 +17,7 @@ const Card = ({ name, priceBefore, priceAfter, image }) => {
       <div className="w-[90%] mx-auto">
         <p className="text-[20px] text-blue-teal font-semibold">{name}</p>
         <hr className="bg-[#DEDDDD]" />
-        <div className="flex justify-between items-center">
+        <div className="flex flex-wrap justify-between items-center">
           <div>
             <span className="text-[#B8B8B8] text-sm font-semibold mr-2">
               {currencyFormat.format(priceBefore)}
