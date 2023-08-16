@@ -8,7 +8,7 @@ const Card = ({ name, priceBefore, priceAfter, image }) => {
   });
 
   return (
-    <div className="border-2 rounded-[30px] pb-3">
+    <div className="border-2 rounded-[30px] pb-3 bg-white ">
       <div className="bg-blue-teal px-3 py-2 w-fit text-white ml-[30px] mt-[29px] rounded-lg font-open-sans">
         Vegetable
       </div>

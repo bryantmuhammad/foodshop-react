@@ -145,7 +145,26 @@ const Home = () => {
 
       <Testimoial />
 
-      <div className="h-[1050px]"></div>
+      <div className="h-[1050px] bg-blue-teal pt-[367px] pb-52">
+        <div className="max-w-7xl mx-auto">
+          <div className="font-yellowtail text-4xl text-green-teal">Offer</div>
+          <div className="flex justify-between mb-12">
+            <div className="font-roboto text-heading-two text-white">
+              We Offering Organic For You
+            </div>
+            <Button className="text-blue-teal bg-yellow-teal">
+              View All Product
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-4 4 gap-5 gap-y-5">
+            <Card name="Calabrese Broccoli" priceAfter="20" priceBefore="13" />
+            <Card name="Calabrese Broccoli" priceAfter="20" priceBefore="13" />
+            <Card name="Calabrese Broccoli" priceAfter="20" priceBefore="13" />
+            <Card name="Calabrese Broccoli" priceAfter="20" priceBefore="13" />
+          </div>
+        </div>
+      </div>
     </>
   );
 };
