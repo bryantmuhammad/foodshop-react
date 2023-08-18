@@ -47,6 +47,7 @@ module.exports = {
           "25px",
           {
             fontWeight: "800",
+            color: "blue-teal",
           },
         ],
       },
@@ -56,6 +57,7 @@ module.exports = {
         roboto: ["Roboto", "sans-serif"],
         "open-sans": ["Open Sans", "sans-serif"],
       },
+      gridTemplateColumns: {},
     },
   },
   plugins: [],

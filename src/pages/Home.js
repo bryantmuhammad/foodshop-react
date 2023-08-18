@@ -6,9 +6,13 @@ import card2 from "../image/card-2.jpg";
 import bg2 from "../image/bg-second.png";
 import leaf from "../image/leaf.png";
 import mail from "../image/mail.png";
-import Card from "../components/Card";
+import garden from "../image/garden.jpg";
+import firstlayer from "../image/firstlayer.jpg";
+import secondlayer from "../image/secondlayer.jpg";
+import thirdlayer from "../image/thirdlayer.jpg";
 
 import Testimoial from "./Testimoial";
+import CardList from "../components/CardList";
 
 const Home = () => {
   return (
@@ -24,7 +28,7 @@ const Home = () => {
           <p className="text-heading-one text-blue-teal font-roboto leading-snug">
             Choose the best healthier way of life
           </p>
-          <Button>
+          <Button className="w-full lg:w-fit">
             Explore Now
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +77,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex flex-col xl:flex-row bg-[#F9F8F8] lg:px-60 lg:py-28">
+      <div className="flex flex-col xl:flex-row bg-[#F9F8F8] py-28 px-3 lg:px-60">
         <img src={bg2} />
         <div className="px-3 ">
           <p className="text-green-teal font-yellowtail text-[36px] mb-2">
@@ -131,24 +135,18 @@ const Home = () => {
         <p className="text-blue-teal font-roboto text-heading-two text-center">
           Our Products
         </p>
-        <div className="grid grid-cols-1 lg:grid-cols-4 lg:px-64 gap-5 px-3 gap-y-5">
-          <Card name="Calabrese Broccoli" priceAfter="20" priceBefore="13" />
-          <Card name="Calabrese Broccoli" priceAfter="20" priceBefore="13" />
-          <Card name="Calabrese Broccoli" priceAfter="20" priceBefore="13" />
-          <Card name="Calabrese Broccoli" priceAfter="20" priceBefore="13" />
-          <Card name="Calabrese Broccoli" priceAfter="20" priceBefore="13" />
-        </div>
-        <Button className="mx-auto text-white" variant="blue">
+        <CardList className="px-3 lg:px-64 gap-5 gap-y-5" />
+        <Button className="mx-auto text-white my-5" variant="blue">
           Load More
         </Button>
       </div>
 
       <Testimoial />
 
-      <div className="h-[1050px] bg-blue-teal pt-[367px] pb-52">
-        <div className="max-w-7xl mx-auto">
+      <div className=" bg-blue-teal py-7 lg:py-[367px]">
+        <div className="max-w-7xl mx-auto px-7 lg:px-0">
           <div className="font-yellowtail text-4xl text-green-teal">Offer</div>
-          <div className="flex justify-between mb-12">
+          <div className="lg:flex justify-between mb-12">
             <div className="font-roboto text-heading-two text-white">
               We Offering Organic For You
             </div>
@@ -156,13 +154,62 @@ const Home = () => {
               View All Product
             </Button>
           </div>
+          <CardList className="gap-5 gap-y-5" />
+        </div>
+      </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-4 4 gap-5 gap-y-5">
-            <Card name="Calabrese Broccoli" priceAfter="20" priceBefore="13" />
-            <Card name="Calabrese Broccoli" priceAfter="20" priceBefore="13" />
-            <Card name="Calabrese Broccoli" priceAfter="20" priceBefore="13" />
-            <Card name="Calabrese Broccoli" priceAfter="20" priceBefore="13" />
+      <div className="xl:flex">
+        <div>
+          <img src={garden} className="w-full" />
+        </div>
+        <div className="max-w-3xl flex items-center">
+          <div className=" bg-white rounded-2xl px-[89px] py-20 xl:-ml-48">
+            <div className="text-green-teal font-yellowtail text-4xl">
+              Eco Friendly
+            </div>
+            <div className="text-heading-two text-blue-teal font-extrabold leading-none mb-9">
+              Econis is a Friendly Organic Store
+            </div>
+
+            <ul className="space-y-4">
+              <li>
+                <div className="text-heading-six font-medium font-roboto">
+                  Start with Our Company First
+                </div>
+                <div className="text-silver-teal text-lg leading-7">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptat
+                  accusantium doloremque laudantium. Sed ut perspiciatis.
+                </div>
+              </li>
+              <li>
+                <div className="text-heading-six font-medium font-roboto">
+                  Start with Our Company First
+                </div>
+                <div className="text-silver-teal text-lg leading-7">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptat
+                  accusantium doloremque laudantium. Sed ut perspiciatis.
+                </div>
+              </li>
+              <li>
+                <div className="text-heading-six font-medium font-roboto">
+                  Start with Our Company First
+                </div>
+                <div className="text-silver-teal text-lg leading-7">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptat
+                  accusantium doloremque laudantium. Sed ut perspiciatis.
+                </div>
+              </li>
+            </ul>
           </div>
+        </div>
+      </div>
+
+      <div className="bg-[#F1F8F4] py-[11.5rem] grid grid-cols-3">
+        <div
+          className="flex justify-center items-center bg-no-repeat bg-cover h-80"
+          style={{ backgroundImage: `url(${firstlayer})` }}
+        >
+          test
         </div>
       </div>
     </>
