@@ -15,7 +15,7 @@ import TestimonialList from "./TestimonialList";
 
 const Testimoial = () => {
   return (
-    <div className="flex justify-between py-5">
+    <div className="flex justify-between">
       <img src={secright} className="hidden xl:block" />
       <div className="swiper mt-8 px-2">
         <p className="font-yellowtail text-[36px] text-green-teal text-center mb-2">

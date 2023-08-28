@@ -8,8 +8,8 @@ import leaf from "../image/leaf.png";
 import mail from "../image/mail.png";
 import garden from "../image/garden.jpg";
 import firstlayer from "../image/firstlayer.jpg";
-import secondlayer from "../image/secondlayer.jpg";
-import thirdlayer from "../image/thirdlayer.jpg";
+import tomato from "../image/tomato.png";
+import spinach from "../image/spinach.png";
 
 import Testimoial from "./Testimoial";
 import CardList from "../components/CardList";
@@ -204,12 +204,94 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="bg-[#F1F8F4] py-[11.5rem] grid grid-cols-3">
+      <div className="bg-[#F1F8F4] py-[11.5rem] grid grid-cols-1 xl:grid-cols-3 gap-10">
         <div
-          className="flex justify-center items-center bg-no-repeat bg-cover h-80"
+          className="flex justify-center items-center bg-no-repeat bg-cover h-[588px]"
           style={{ backgroundImage: `url(${firstlayer})` }}
         >
-          test
+          <div className="bg-white py-8 px-20 font-roboto text-blue-teal text-2xl rounded-3xl">
+            Orange Juice
+          </div>
+        </div>
+
+        <div
+          className="flex justify-center items-center bg-no-repeat bg-cover h-[588px]"
+          style={{ backgroundImage: `url(${firstlayer})` }}
+        >
+          <div className="bg-white py-8 px-20 font-roboto text-blue-teal text-2xl rounded-3xl">
+            Orange Juice
+          </div>
+        </div>
+
+        <div
+          className="flex justify-center items-center bg-no-repeat bg-cover h-[588px]"
+          style={{ backgroundImage: `url(${firstlayer})` }}
+        >
+          <div className="bg-white py-8 px-20 font-roboto text-blue-teal text-2xl rounded-3xl">
+            Orange Juice
+          </div>
+        </div>
+      </div>
+
+      <div className="w-[80%] mx-auto mt-28 px-3 xl:px-0">
+        <div className="font-yellowtail text-green-teal text-4xl">News</div>
+        <div className="space-y-6 xl:space-y-0 xl:flex xl:justify-between mb-8">
+          <div className="font-roboto text-blue-teal text-5xl font-extrabold max-w-3xl">
+            Discover weekly content about organic food, & more
+          </div>
+          <Button className="bg-white text-blue-teal border-[2px] border-blue-teal">
+            More News
+          </Button>
+        </div>
+        <div className="space-y-24 xl:space-y-0 xl:flex xl:gap-[46px]">
+          <div
+            className="h-[529px] w-full bg-no-repeat bg-cover rounded-3xl relative flex flex-col justify-end"
+            style={{ backgroundImage: `url(${spinach})` }}
+          >
+            <div className="bg-white font-roboto text-blue-teal font-extrabold sm:text-lg xl:text-2xl absolute left-7 top-7 rounded-full px-4 py-2 xl:px-6 xl:py-4 text-center">
+              25 <br />
+              Nov
+            </div>
+            <div className="bg-white h-fit w-10/12 -bottom-12 mx-auto relative rounded-2xl shadow-xl">
+              <div className="py-10 px-6 space-y-[15px] ">
+                <div className="text-blue-teal font-roboto text-lg">
+                  By Richard Card
+                </div>
+                <div className="font-robooto text-blue-teal text-2xl font-extrabold w-3/4">
+                  The Benefits of Vitamin D & How to Get It
+                </div>
+                <div className="text-silver-teal font-open-sans text-lg leading-7 w-3/4">
+                  Simply dummy text of the printing and typesetting industry.
+                  Lorem Ipsum
+                </div>
+                <Button>Read More</Button>
+              </div>
+            </div>
+          </div>
+          <div
+            className="h-[529px] w-full bg-no-repeat bg-cover rounded-3xl relative flex flex-col justify-end"
+            style={{ backgroundImage: `url(${spinach})` }}
+          >
+            <div className="bg-white font-roboto text-blue-teal font-extrabold sm:text-lg xl:text-2xl absolute left-7 top-7 rounded-full px-4 py-2 xl:px-6 xl:py-4 text-center">
+              25 <br />
+              Nov
+            </div>
+            <div className="bg-white h-fit w-10/12 -bottom-12 mx-auto relative rounded-2xl shadow-xl">
+              <div className="py-10 px-6 space-y-[15px] ">
+                <div className="text-blue-teal font-roboto text-lg">
+                  By Richard Card
+                </div>
+                <div className="font-robooto text-blue-teal text-2xl font-extrabold w-3/4">
+                  The Benefits of Vitamin D & How to Get It
+                </div>
+                <div className="text-silver-teal font-open-sans text-lg leading-7 w-3/4">
+                  Simply dummy text of the printing and typesetting industry.
+                  Lorem Ipsum
+                </div>
+                <Button>Read More</Button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
