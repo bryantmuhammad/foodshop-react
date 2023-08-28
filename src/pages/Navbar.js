@@ -5,7 +5,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="w-full fixed bg-white bg-opacity-70 z-50">
+    <div className="w-full fixed bg-white bg-opacity-70 z-10">
       <div className="lg:hidden">
         <NavbarMobileLayout open={open} setOpen={setOpen} />
       </div>

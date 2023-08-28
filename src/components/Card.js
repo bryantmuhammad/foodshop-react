@@ -1,5 +1,4 @@
 import React from "react";
-import brokoli from "../image/brokoli.png";
 
 const Card = ({ name, priceBefore, priceAfter, image }) => {
   const currencyFormat = new Intl.NumberFormat("en-Us", {
@@ -7,16 +6,20 @@ const Card = ({ name, priceBefore, priceAfter, image }) => {
     currency: "USD",
   });
 
+  console.log(process.env.PUBLIC_URL);
   return (
     <div className="border-2 rounded-[30px] pb-3 bg-white ">
       <div className="bg-blue-teal px-3 py-2 w-fit text-white ml-[30px] mt-[29px] rounded-lg font-open-sans">
         Vegetable
       </div>
-      <img src={brokoli} className="w-full h-[324px]" />
+      <img
+        src="%PUBLIC_URL%/image/items/banana.png"
+        className="w-full h-[324px]"
+      />
 
       <div className="w-[90%] mx-auto">
         <p className="text-[20px] text-blue-teal font-semibold">{name}</p>
-        <hr className="bg-[#DEDDDD]" />
+        <hr className="bg-[#050505]" />
         <div className="flex flex-wrap justify-between items-center">
           <div>
             <span className="text-[#B8B8B8] text-sm font-semibold mr-2">
