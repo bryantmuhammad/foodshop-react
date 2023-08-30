@@ -13,8 +13,13 @@ import spinach from "../image/spinach.png";
 
 import Testimoial from "./Testimoial";
 import CardList from "../components/CardList";
-
+import axios from "../utils/axios";
+import { useLoaderData } from "react-router-dom";
 const Home = () => {
+  const data = useLoaderData();
+  const items = data.data.data;
+  console.log(items);
+
   return (
     <>
       <div
@@ -135,7 +140,7 @@ const Home = () => {
         <p className="text-blue-teal font-roboto text-heading-two text-center">
           Our Products
         </p>
-        <CardList className="px-3 lg:px-64 gap-5 gap-y-5" />
+        <CardList className="px-3 lg:px-64 gap-5 gap-y-5" items={items} />
         <Button className="mx-auto text-white my-5" variant="blue">
           Load More
         </Button>
@@ -154,7 +159,7 @@ const Home = () => {
               View All Product
             </Button>
           </div>
-          <CardList className="gap-5 gap-y-5" />
+          <CardList className="gap-5 gap-y-5" items={items} />
         </div>
       </div>
 
@@ -296,6 +301,13 @@ const Home = () => {
       </div>
     </>
   );
+};
+
+export const loader = () => {
+  return axios({
+    method: "get",
+    url: "/api/item",
+  });
 };
 
 export default React.memo(Home);

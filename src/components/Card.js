@@ -6,16 +6,41 @@ const Card = ({ name, priceBefore, priceAfter, image }) => {
     currency: "USD",
   });
 
-  console.log(process.env.PUBLIC_URL);
+  const getImage = (image) => {
+    switch (image) {
+      case "banana":
+        return require("../image/items/banana.png");
+        break;
+      case "brokoli":
+        return require("../image/items/brokoli.png");
+      case "nut":
+        return require("../image/items/nut.png");
+        break;
+      case "bean":
+        return require("../image/items/bean.png");
+        break;
+      case "hazelnut":
+        return require("../image/items/hazelnut.png");
+        break;
+      case "egg":
+        return require("../image/items/egg.png");
+        break;
+      case "rusk":
+        return require("../image/items/rusk.png");
+        break;
+      default:
+        return require("../image/items/banana.png");
+    }
+  };
+
+  let imagePath = getImage(image);
+
   return (
-    <div className="border-2 rounded-[30px] pb-3 bg-white ">
+    <div className="relative border-2 rounded-[30px] pb-3 bg-white card">
       <div className="bg-blue-teal px-3 py-2 w-fit text-white ml-[30px] mt-[29px] rounded-lg font-open-sans">
         Vegetable
       </div>
-      <img
-        src="%PUBLIC_URL%/image/items/banana.png"
-        className="w-full h-[324px]"
-      />
+      <img src={imagePath} className="w-full h-[324px]" />
 
       <div className="w-[90%] mx-auto">
         <p className="text-[20px] text-blue-teal font-semibold">{name}</p>
@@ -60,6 +85,12 @@ const Card = ({ name, priceBefore, priceAfter, image }) => {
             </svg>
           </div>
         </div>
+      </div>
+
+      <div className="card-overlay">
+        <a className="font-open-sans text-white font-bold text-lg drop-shadow-sm">
+          Add to cart
+        </a>
       </div>
     </div>
   );
