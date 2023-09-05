@@ -1,6 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const Card = ({ name, priceBefore, priceAfter, image }) => {
+const Card = ({ id, name, priceBefore, priceAfter, image }) => {
+  const navigation = useNavigate();
+
+  const buttonClickHandler = (event) => {
+    event.preventDefault();
+    navigation(`/products/${id}`);
+  };
+
   const currencyFormat = new Intl.NumberFormat("en-Us", {
     style: "currency",
     currency: "USD",
@@ -36,7 +44,10 @@ const Card = ({ name, priceBefore, priceAfter, image }) => {
   let imagePath = getImage(image);
 
   return (
-    <div className="relative border-2 rounded-[30px] pb-3 bg-white card">
+    <div
+      onClick={buttonClickHandler}
+      className="relative border-2 rounded-[30px] pb-3 bg-white card"
+    >
       <div className="bg-blue-teal px-3 py-2 w-fit text-white ml-[30px] mt-[29px] rounded-lg font-open-sans">
         Vegetable
       </div>
