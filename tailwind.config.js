@@ -50,6 +50,12 @@ module.exports = {
             color: "blue-teal",
           },
         ],
+        paragraph: [
+          "18px",
+          {
+            fontWeight: 400,
+          },
+        ],
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],

@@ -5,7 +5,9 @@ import Root from "./pages/Root";
 import About from "./pages/About";
 import Home, { loader as homeLoader } from "./pages/Home";
 import Error from "./pages/Error";
-import DetailProduct from "./pages/products/DetailProduct";
+import DetailProduct, {
+  loader as detailLoader,
+} from "./pages/products/DetailProduct";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +26,7 @@ const router = createBrowserRouter([
           {
             path: ":idProduct",
             element: <DetailProduct />,
+            loader: detailLoader,
           },
         ],
       },

@@ -7,6 +7,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
+
+@media screen and (max-width: 640px) {
+  :root{
+    font-size: 85%;
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -64,3 +71,5 @@ code {
 .card:hover .card-overlay a {
   display: block;
 }
+
+
