@@ -302,8 +302,8 @@ const Home = () => {
   );
 };
 
-export const loader = () => {
-  return axios({
+export const loader = async () => {
+  return await axios({
     method: "get",
     url: "/api/item",
   });
