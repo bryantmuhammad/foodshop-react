@@ -1,4 +1,4 @@
-import { Await, defer, useLoaderData } from "react-router-dom";
+import { Await, defer, useLoaderData, useNavigate } from "react-router-dom";
 import axios from "../../utils/axios";
 import getImage, { currency } from "../../utils/image";
 import Button from "../../components/Button";
@@ -11,11 +11,15 @@ import { loadAllItems } from "../../api/product";
 
 const DetailProduct = () => {
   const loader = useLoaderData();
+  const navigate = useNavigate();
+  loader.item.catch((err) => {
+    navigate("/error");
+  });
 
   return (
     <>
       <Suspense fallback={<DetailProductSkeleton />}>
-        <Await resolve={loader.item}>
+        <Await resolve={loader.item} errorElement={<p>Error</p>}>
           {(loadItem) => {
             const { data } = loadItem.data;
             const image = getImage(data.image);
