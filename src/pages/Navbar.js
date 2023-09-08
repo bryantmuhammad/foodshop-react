@@ -1,16 +1,37 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import NavbarMobileLayout from "./NavbarMobileLayout";
 import ListLink from "./ListLink";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [shrinkNavbar, setShirnkNavbar] = useState(false);
+
+  const onScroll = (e) => {
+    if (window.scrollY > 200) {
+      setShirnkNavbar(true);
+    } else {
+      setShirnkNavbar(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  const shrinkClass = shrinkNavbar ? "bg-white shadow-lg" : "bg-white/70";
 
   return (
-    <div className="w-full bg-white bg-opacity-70 sticky top-0 z-10">
+    <div
+      className={`w-full  sticky top-0 z-10 py-5 transition ease-in ${shrinkClass} duration-10000`}
+    >
       <div className="lg:hidden">
         <NavbarMobileLayout open={open} setOpen={setOpen} />
       </div>
 
-      <div className="w-full xl:w-11/12 px-5 xl:px-0 xl:my-[69px] flex mx-auto">
+      <div className="w-full xl:w-11/12 px-5 xl:px-0 flex mx-auto">
         <div className="flex items-center w-full gap-[100px] 2xl:gap-[150px] justify-between xl:justify-normal">
           <div className="text-blue-teal text-[38px] font-extrabold">
             Organick

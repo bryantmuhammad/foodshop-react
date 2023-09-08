@@ -7,16 +7,20 @@ const ListLink = () => {
     <>
       <NavLink
         to="/"
-        className={({ isActive, isPending }) => isActive && "text-yellow-teal"}
+        className={({ isActive, isPending }) =>
+          isActive ? "text-yellow-teal" : ""
+        }
       >
         <li>Home</li>
       </NavLink>
 
       <NavLink
-        to="/about"
-        className={({ isActive, isPending }) => isActive && "text-yellow-teal"}
+        to="/products"
+        className={({ isActive, isPending }) =>
+          isActive ? "text-yellow-teal" : ""
+        }
       >
-        <li>About</li>
+        <li>Product</li>
       </NavLink>
 
       <Menu as="div" className="relative">
@@ -61,21 +65,27 @@ const ListLink = () => {
 
       <NavLink
         to="/shop"
-        className={({ isActive, isPending }) => isActive && "text-yellow-teal"}
+        className={({ isActive, isPending }) =>
+          isActive ? "text-yellow-teal" : ""
+        }
       >
         <li>Shop</li>
       </NavLink>
 
       <NavLink
         to="/project"
-        className={({ isActive, isPending }) => isActive && "text-yellow-teal"}
+        className={({ isActive, isPending }) =>
+          isActive ? "text-yellow-teal" : ""
+        }
       >
         <li>Projects</li>
       </NavLink>
 
       <NavLink
         to="/news"
-        className={({ isActive, isPending }) => isActive && "text-yellow-teal"}
+        className={({ isActive, isPending }) =>
+          isActive ? "text-yellow-teal" : ""
+        }
       >
         <li>News</li>
       </NavLink>

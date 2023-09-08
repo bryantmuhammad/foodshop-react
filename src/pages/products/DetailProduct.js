@@ -1,12 +1,13 @@
 import { Await, defer, useLoaderData } from "react-router-dom";
 import axios from "../../utils/axios";
 import getImage, { currency } from "../../utils/image";
-import Button, { buttonVariant } from "../../components/Button";
+import Button from "../../components/Button";
 import { Tab } from "@headlessui/react";
 import { cn } from "../../utils/utils";
 import CardList from "../../components/CardList";
 import { Suspense } from "react";
 import DetailProductSkeleton from "../skeleton/DetailProductSkeleton";
+import { loadAllItems } from "../../api/product";
 
 const DetailProduct = () => {
   const loader = useLoaderData();
@@ -21,7 +22,7 @@ const DetailProduct = () => {
 
             const lists = ["Product Description", "Additional Info"];
             return (
-              <div>
+              <div className="mb-28">
                 <div className="bg-[#E3F1E9] w-full h-96 flex justify-center items-center flex-wrap">
                   <div className="text-blue-teal font-roboto text-heading-one">
                     Shop Single
@@ -128,21 +129,25 @@ const DetailProduct = () => {
                     </Tab.Panels>
                   </Tab.Group>
                 </div>
-
-                {/* <CardList /> */}
               </div>
             );
           }}
         </Await>
       </Suspense>
+
+      <div className="max-w-7xl mx-auto px-7 lg:px-0">
+        <div className="text-center text-blue-teal font-roboto text-5xl font-extrabold mb-10">
+          Related Products
+        </div>
+        <CardList className="gap-5 gap-y-5" items={loader.items} />
+      </div>
     </>
   );
 };
 
-const loadItem = async (params) => {
+const loadItem = (params) => {
   const { idProduct } = params;
 
-  //defer
   return axios({
     url: `/api/item/${idProduct}`,
     method: "GET",
@@ -152,6 +157,7 @@ const loadItem = async (params) => {
 export const loader = async ({ request, params }) => {
   return defer({
     item: loadItem(params),
+    items: loadAllItems(),
   });
 };
 

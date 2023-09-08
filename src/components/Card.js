@@ -22,7 +22,7 @@ const Card = ({ id, name, priceBefore, priceAfter, image }) => {
       <div className="bg-blue-teal px-3 py-2 w-fit text-white ml-[30px] mt-[29px] rounded-lg font-open-sans">
         Vegetable
       </div>
-      <img src={imagePath} className="w-full h-[324px]" />
+      <img src={imagePath} className="w-full lg:h-[324px]" />
 
       <div className="w-[90%] mx-auto">
         <p className="text-[20px] text-blue-teal font-semibold">{name}</p>
